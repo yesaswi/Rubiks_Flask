@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block head %}
+<title>Flask App</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='js/gcube.js')  }}"></script>
+{% endblock %} {% block body %}
+<img src="{{url_for('static', filename='images/logo.png')}}" align = "middle" />
+<h1>Rubik's Solver</h1>
+<h2>Use the keyboard to move the cube</h2>
+<p>
+    <ul>
+        <li>
+            Right Clockwise - R (Uppercase) 
+        </li>
+        <li>
+            Right Anti-Clockwise - r (Lowercase) 
+        </li>
+        <li>
+            XxRrMmLlYyUuEeDdZzFfSsBb
+        </li>
+    </ul>
+</p>
+<g-cube></g-cube>
+{% endblock %}
